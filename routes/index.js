@@ -9,4 +9,11 @@ const router = express.Router()
 // router.delete()
 
 
+// router.get()
+// router.post()
+// router.get()
+// router.patch()
+// router.delete()
+
+
 module.exports = router
