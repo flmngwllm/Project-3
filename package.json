@@ -9,6 +9,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "cd client && npm i && npm run build"
   },
+  
+  "engines": {
+    "node": "10.13.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/flmngwllm/Project-3.git"
