@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 require ('dotenv').config()
 
 
-mongoose.connect('mongodb://localhost/my-creatures')
+mongoose.connect('mongodb://localhost/project-3')
 
 mongoose.connection.once('open', () => {
   console.log(`Mongoose has connected to MongoDB`)
