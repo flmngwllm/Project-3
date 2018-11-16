@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 
+class User extends Component {
 
-class HomePage extends Component {
-
-
-
+state {
+    user
+}
+    
     render() {
         return (
             <div>
-                <h1>Welcome </h1>
+                
             </div>
         );
     }
 }
 
-export default HomePage;
+export default User;

@@ -4,6 +4,7 @@ import LogIn from './components/LogIn';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import Profile from './components/Profile'
+import User from './components/User'
 
 
 
@@ -16,6 +17,7 @@ class App extends Component {
       <NavBar/>
         <Switch>
         <Route exact path= "/login" component ={LogIn}/>
+        <Route exact path= "/users/"  component ={User}/>
         <Route exact path= "/users/:userId"  component ={Profile}/>
         <Route path= "/" component ={Home}/>
 
