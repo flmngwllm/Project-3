@@ -14,12 +14,17 @@ class SignUpForm extends Component {
       }
       handleSubmit = (event) => {
         event.preventDefault()
-    
+        // const payload = {
+        //     username: "",
+        //     password:''
+        // }
         // Make post to our api to create new user
-        axios.post('/api/users', this.state).then(res => {
+        axios.post('/api/users',this.state).then(res => {
           // when we get that data back, we need to navigate to the new users page
+         
+
           console.log(res.data)
-          this.props.history.push(`/users/${res.data._id}`)
+          this.props.history.push(`/users`)
         })
         
       }
