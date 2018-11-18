@@ -9,21 +9,21 @@ const List = require('../models/List')
 
       index: (req, res) => {
         let userId = req.params.userId
-        User.findById(userId).populate('list')
+        User.findById(userId).populate('lists')
           .then((user) => {
-            res.send(user.list)
+            res.send(user.lists)
           })
       },
       show: (req, res) => {
         let listId = req.params.listId
-        Idea.findById(listId)
+        List.findById(listId)
           .then((list) => {
             res.send(list)
           })
       },
       delete: (req, res) => {
         let listId = req.params.listId
-        Idea.findByIdAndDelete(listId)
+        List.findByIdAndDelete(listId)
           .then(() => {
             res.send(200)
           })
@@ -41,10 +41,10 @@ const List = require('../models/List')
         User.findById(listId)
           .then((user) => {
             console.log(user)
-            Idea.create(req.body)
+            List.create(req.body)
               .then((newList) => {
                 console.log(newList)
-                user.ideas.push(newList)
+                user.lists.push(newList)
                 user.save()
                 res.send(newList)
               })

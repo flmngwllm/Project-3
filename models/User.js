@@ -3,7 +3,14 @@ const Schema = mongoose.Schema
 
 const User =  new Schema({
     username: String,
-    password: String
+    password: String,
+    lists: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'List'
+        }
+    ]
 })
+
 
 module.exports = mongoose.model('User', User)

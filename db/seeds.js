@@ -5,28 +5,25 @@ const List = require('../models/List')
 
 
 //require controllers here
-const Stuff = new Idea({
+const Stuff = new List({
     title: 'The Worst',
     description: "Games to never play"
 })
-const Want = new Idea({
+const Want = new List({
     title: 'Buying Immediatly',
     description: "Games to buy when I have money"
 })
 
 const noname = new User({
     username: 'noname21',
-    password: 'nothing'
+    password: 'nothing',
+    lists: [Stuff, Want]
 })
-const yesname = new User({
-    username: 'yesname889',
-    password: 'yesthing'
-})
+
 
 User.remove({})
     .then(() => List.remove({}))
     .then(() => List.insertMany([Stuff,Want]))
     .then(() => noname.save())
-    .then(() => yesname.save())
     .then(() => console.log('Successful Save'))
     .then(() => mongoose.connection.close())
