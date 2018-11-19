@@ -7,7 +7,7 @@
 
 //     // axios.get("https://api-endpoint.igdb.com/games/", {
 //     //     headers: {
-//     //       "user-key": "YOUR_API_KEY",
+//     //       "user-key": "06c66293926af446cfe7b0a9f976cb26",
 //     //       Accept: "application/json"
 //     //     }
 //     //   })

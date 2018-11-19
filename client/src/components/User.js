@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import {Link} from 'react-router-dom'
+import { Card, CardImg, CardText, CardBody, CardLink,
+    CardTitle, CardSubtitle } from 'reactstrap';
+
 
 class User extends Component {
     state = {
