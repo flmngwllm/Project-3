@@ -20,5 +20,9 @@ router.get('/api/lists/:listId',listController.show)
 router.patch('/api/lists/:listId', listController.update)
 router.delete('/api/lists/:listId', listController.delete)
 
+// router.get('/api/users/:userId/lists/:listId/games', gameController.index)
+// router.post('/api/users/:userId/lists', listController.create)
+// router.get('/api/lists/:listId',listController.show)
+// router.delete('/api/lists/:listId', listController.delete)
 
 module.exports = router
