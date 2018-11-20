@@ -120,7 +120,7 @@ state = {
                   name="description" 
                   value={list.description} 
                 />
-                <button onClick={deleteIdea}>X</button>
+                <button onClick={deleteIdea}>delete</button>
                 </div>
             )
           })}
