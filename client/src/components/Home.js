@@ -5,17 +5,17 @@ import styled from 'styled-components'
 
 
 
-const NavBarStyles = styled.div`
-    background: blue;
-    display: flex;
-    justify-content: space-between;
-    height: 50px;
-    color: white;
+// const Styles = styled.div`
+//     background: blue;
+//     display: flex;
+//     justify-content: space-between;
+//     height: 50px;
+//     color: white;
 
-    a {
-        text-decoration: none;
-        color:white;
-    }`
+//     a {
+//         text-decoration: none;
+//         color:white;
+//     }`
 
 class HomePage extends Component {
 

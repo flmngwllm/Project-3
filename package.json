@@ -28,6 +28,7 @@
     "concurrently": "^4.0.1",
     "dotenv": "^6.1.0",
     "express": "^4.16.4",
+    "giant-bomb": "^1.3.3",
     "igdb-api-node": "^3.1.7",
     "mongoose": "^5.3.12",
     "morgan": "^1.9.1",

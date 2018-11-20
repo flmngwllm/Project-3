@@ -6,6 +6,9 @@ import Home from './components/Home';
 import Profile from './components/Profile'
 import User from './components/User'
 import List from './components/List'
+import Games from './components/Games'
+
+
 
 
 
@@ -22,6 +25,7 @@ class App extends Component {
         <Route exact path= "/users/"  component ={User}/>
         <Route exact path= "/users/:userId"  component ={Profile}/>
         <Route exact path= "/users/:userId/lists" component ={List}/>
+        <Route exact path= "/games" component ={Games}/>
         <Route path= "/" component ={Home}/>
 
         </Switch>
