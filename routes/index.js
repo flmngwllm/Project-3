@@ -2,7 +2,6 @@ const express = require('express')
 const router = express.Router()
 const userController = require('../controllers/userController')
 const listController = require('../controllers/listController')
-const gameController = require('../controllers/gameController')
 
 // require controllers here
 // router.get('/', application.index)
@@ -22,8 +21,7 @@ router.patch('/api/lists/:listId', listController.update)
 router.delete('/api/lists/:listId', listController.delete)
 
 // router.get('/api/users/:userId/lists/:listId/games', gameController.index)
-// router.get('/api/games', gameController.api)
-// router.get('/api/lists/:listId',listController.show)
+// router.get('/api/lists/:listId',gameController.show)
 // router.delete('/api/lists/:listId', listController.delete)
 
 module.exports = router

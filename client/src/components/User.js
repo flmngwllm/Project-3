@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import {Link} from 'react-router-dom'
-import { Card, CardImg, CardText, CardBody, CardLink,
-    CardTitle, CardSubtitle } from 'reactstrap';
-
+import '../Home.css'
 
 class User extends Component {
     state = {
@@ -22,7 +20,7 @@ class User extends Component {
     
       render() {
         return (
-          <div>
+          <div className = 'background3'>
             
             { this.state.users.map((user) => (
               <div key={user._id}>

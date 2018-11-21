@@ -1,25 +1,62 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import styled from 'styled-components'
+import '../Home.css'
+import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 
+const ListStyles = styled.div`
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 400px;
+  height: 200px;
+  border-radius: 25px;
+  background: black;
+  margin: 10px 0;
+  button {
+    width: 20px;
+    right: 5px;
+    top: 10px;
+    background-color: black;
+    border-radius: 5px;
+    position: absolute;
+    border: none;
+  }
+  input,
+  textarea {
+    background-color: black;
+    border: none;
+    border-radius: 25px;
+    
+  }
+  input {
+    height: 30%;
+    font-size: 1.3rem;
+    left: 40px;
+  }
+  textarea {
+    height: 70%;
+    border-radius:25px;
+  }
 
-// const Styles = styled.div`
-//     background: blue;
-//     display: flex;
-//     justify-content: space-between;
-//     height: 50px;
-//     color: white;
+  `
 
-    // a {
-    //     text-decoration: none;
-    //     color:white;
-    // }`
+  const listStylesC = styled.div`
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  `
+
+const createBut = styled.div`
+ background-color: black;
+`
 
 class List extends Component {
 
 
-state = {
+  state = {
     user: {},
     lists: []
   }
@@ -40,8 +77,8 @@ state = {
   handleCreateNewList = () => {
     const userId = this.props.match.params.userId
     const payload = {
-      title: 'List Title',
-      description: 'List Description'
+      title: 'Name',
+      description: 'Description'
     }
     axios.post(`/api/users/${userId}/lists`, payload).then(res => {
       const newList = res.data
@@ -51,22 +88,18 @@ state = {
   }
 
   handleDelete = listId => {
-    // some unique value
     axios.delete(`/api/lists/${listId}`).then(() => {
-      //Remove the idea with ideaID from this.state.ideas
+      
       const newLists = [...this.state.lists]
-      // Return only ideas that are NOT the id provided
       const filtered = newLists.filter(list => {
-        return list._id !== listId // ! = =
+        return list._id !== listId 
       })
-      // Take filtered data and set it to ideas
       this.setState({lists: filtered})
     })
   }
 
   handleChange = (event, listId) => {
-    // const name = event.target.name
-    // const value = event.target.value
+  
     const { value, name } = event.target
     const newLists = [...this.state.lists]
     const updatedVals = newLists.map(list => {
@@ -80,32 +113,31 @@ state = {
   }
 
   handleUpdate = (listId) => {
-    // Find the individual updated idea from this.state.ideas
     const listToUpdate = this.state.lists.find(list => {
       return list._id === listId
     })
-    // axios post the endpoint with updated data
     axios.patch(`/api/lists/${listId}`, listToUpdate).then(() => {
-      console.log("Updated Idea")  
+      console.log("Updated List")  
     })
-    // console .log saved
   }
 
   render() {
     return (
-      <div>
-        <h1>{this.state.user.username}</h1>
-        <button onClick={this.handleCreateNewList}>
+      <div className ="background4">
+        <h1>Welcome to your List Page {this.state.user.username}</h1>
+       
+        <button className ='button' onClick={this.handleCreateNewList}>
           Create List
           </button>
-        
-        
+         
+          
+        <listStylesC>
           {this.state.lists.map(list => {
-            const deleteIdea = () => {
+            const deleteList = () => {
               return this.handleDelete(list._id)
             }
             return (
-              <div>
+              <ListStyles>
                 <input 
                   onBlur={() => this.handleUpdate(list._id)}
                   onChange={(event) => this.handleChange(event, list._id)} 
@@ -120,10 +152,11 @@ state = {
                   name="description" 
                   value={list.description} 
                 />
-                <button onClick={deleteIdea}>delete</button>
-                </div>
+                <button onClick={deleteList}>X</button>
+                </ListStyles>
             )
           })}
+          </listStylesC>
       </div>
     )
   }

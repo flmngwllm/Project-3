@@ -1,22 +1,22 @@
 const mongoose = require('./connections')
 const User = require('../models/User')
 const List = require('../models/List')
-const Game = require('../models/Game')
+// const Game = require('../models/Game')
 
 
 
 
 //require controllers here
 
-const RedDead = new Game({
-    name: 'Red Dead',
-    descrition: 'cowboy saves town'
+// const RedDead = new Game({
+//     name: 'Red Dead',
+//     descrition: 'cowboy saves town'
     
-})
+// })
 const Stuff = new List({
     title: 'The Worst',
     description: "Games to never play",
-    games: [RedDead]
+    // games: [RedDead]
 })
 const Want = new List({
     title: 'Buying Immediatly',

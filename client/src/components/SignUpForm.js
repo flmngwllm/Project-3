@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import {Button, Form, FormGroup, Label, Input, FormText} from 'reactstrap'
+import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 class SignUpForm extends Component {
 
@@ -43,15 +43,13 @@ class SignUpForm extends Component {
             <Input onChange={this.handleChange} value={this.state.username} type="text" name="username"/>
           </div>
           </FormGroup>
-
-            <FormGroup>
+          <FormGroup>
           <div>
             <Label htmlFor="password">Password: </Label>
             <Input onChange={this.handleChange} value={this.state.password} type="password" name="password"/>
           </div>
-          
-          </FormGroup>
           <Button type="submit">Create User</Button>
+          </FormGroup>
         </Form>
       
                 

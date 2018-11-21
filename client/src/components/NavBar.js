@@ -5,6 +5,11 @@ import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem,NavLink,Uncon
     DropdownMenu,
     DropdownItem } from 'reactstrap';
 
+
+    const navBar = styled.div`
+  background-color: black;
+  `
+
 class NavBar extends Component {
     constructor(props) {
         super(props);
@@ -21,54 +26,40 @@ class NavBar extends Component {
       }
       render() {
         return (
-          <div>
-            <Navbar color="dark"  expand="md">
-              <NavbarBrand href="/">Game List</NavbarBrand>
+          <navBar>
+            <Navbar className = "nav"   expand="md">
+              <NavbarBrand className = "navlink" href="/">Game List</NavbarBrand>
               <NavbarToggler onClick={this.toggle} />
               <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
                   <NavItem>
-                    <NavLink href="/">Home</NavLink>
+                    <NavLink className = "navlink" href="/">Home</NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink href="/login">LogIn</NavLink>
+                    <NavLink className = "navlink" href="/login">LogIn</NavLink>
                   </NavItem>
-                  <UncontrolledDropdown nav inNavbar>
-                    <DropdownToggle nav caret>
-                      Users
-                    </DropdownToggle>
-                    <DropdownMenu right>
-                      <DropdownItem>
-                       
-                      </DropdownItem>
-                      <DropdownItem>
-                        Option 2
-                      </DropdownItem>
-                      <DropdownItem divider />
-                      <DropdownItem>
-                        Reset
-                      </DropdownItem>
-                    </DropdownMenu>
-                  </UncontrolledDropdown>
+                  <NavItem>
+                    <NavLink className = "navlink" href="/users">Users</NavLink> 
+                    </NavItem>
                 </Nav>
               </Collapse>
             </Navbar>
-          </div>
+            </navBar>
         );
       }
-    }
-//     render() {
-//         return (
-//             <div>
-//                  <h3><Link to ="/">Home</Link></h3>
-//                  <h3><Link to ="/" >Games</Link></h3>
-//                  <h3><Link to ="/users">User</Link></h3>
-//                  <h3><Link to ="/login">Login</Link></h3>
+    
+    // render() {
+    //     return (
+    //         <div>
+    //              <h3><Link to ="/">Home</Link></h3>
+    //              <h3><Link to ="/" >Games</Link></h3>
+    //              <h3><Link to ="/users">User</Link></h3>
+    //              <h3><Link to ="/login">Login</Link></h3>
 
 
-//             </div>
-//         );
-//     }
-// }
+    //         </div>
+    //     );
+    // }
+}
 
 export default NavBar;

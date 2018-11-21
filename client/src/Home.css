@@ -1,0 +1,73 @@
+
+@font-face {
+    font-family: 'press_start_2pregular';
+    src: url('pressstart2p-webfont.woff2') format('woff2'),
+         url('pressstart2p-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+*{
+    color: white;
+    font-family: 'press_start_2pregular';
+    
+}
+
+.text{
+    
+}
+
+.a{
+    text-decoration: none;
+    color:white;
+}
+.button{
+    background-color: black;
+    left: 100px;
+}
+
+.navlink{
+    color: white;
+}
+
+.nav{
+    background-color: black !important;
+    
+}
+
+.background{
+    background-image: url('./keyboard.jpg');
+    height: 800px;  
+    background-position-y: 90%;
+}
+
+.background3{
+    background-image: url('./starwars.jpg');
+    height: 800px;  
+    background-position-y: 100%;
+    background-position-x: 85%;
+}
+
+.background4{
+    background-image: url('./monster.jpg');
+    height: 800px;  
+    background-position-y: 100%;
+    background-position-x: 85%;
+    
+}
+
+.background5{
+    background-image: url('./controlmario.jpg');
+    height: 800px;  
+    background-position-y: 100%;
+    background-position-x: 85%;
+}
+
+
+
+
+
+
