@@ -48,7 +48,7 @@ class SignUpForm extends Component {
             <Label htmlFor="password">Password: </Label>
             <Input onChange={this.handleChange} value={this.state.password} type="password" name="password"/>
           </div>
-          <Button type="submit">Create User</Button>
+          <button className = "button" type="submit">Create User</button>
           </FormGroup>
         </Form>
       
