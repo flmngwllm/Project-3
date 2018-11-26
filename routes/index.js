@@ -21,7 +21,7 @@ router.get('/api/lists/:listId',listController.show)
 router.patch('/api/lists/:listId', listController.update)
 router.delete('/api/lists/:listId', listController.delete)
 
-router.get('/api/users/:userId/lists/:listId/games', gameController.index)
+// router.get('/api/users/:userId/lists/:listId/games', gameController.index)
 // router.get('/api/lists/:listId',gameController.show)
 // router.delete('/api/lists/:listId', listController.delete)
 
