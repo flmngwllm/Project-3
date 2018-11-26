@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import styled from 'styled-components'
 import '../Home.css'
+import {Link} from 'react-router-dom'
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 
@@ -139,10 +140,10 @@ class List extends Component {
             return (
               <ListStyles>
                 <input 
-                  onBlur={() => this.handleUpdate(list._id)}
+                   onBlur={() => this.handleUpdate(list._id)}
                   onChange={(event) => this.handleChange(event, list._id)} 
                   type="text" name="title" 
-                  value={list.title} 
+                  value= {list.title} 
                 />
 
 
@@ -152,7 +153,7 @@ class List extends Component {
                   name="description" 
                   value={list.description} 
                 />
-                <button onClick={deleteList}>X</button>
+                <button onClick={deleteList}> </button>
                 </ListStyles>
             )
           })}

@@ -1,6 +1,20 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import styled from 'styled-components'
+
+
+
+
+const FormStyles = styled.div`
+  
+  width: 500px;
+  `
+
+
+
+
+
 
 class SignUpForm extends Component {
 
@@ -35,25 +49,28 @@ class SignUpForm extends Component {
     render() {
 
         return (
-            <div>
-               <Form onSubmit={this.handleSubmit}>
+          <FormStyles>
+               <Form  onSubmit={this.handleSubmit}>
                <FormGroup>
-          <div>
+
+               <div>
             <Label htmlFor="username">User Name: </Label>
             <Input onChange={this.handleChange} value={this.state.username} type="text" name="username"/>
           </div>
           </FormGroup>
+
+
           <FormGroup>
           <div>
             <Label htmlFor="password">Password: </Label>
             <Input onChange={this.handleChange} value={this.state.password} type="password" name="password"/>
           </div>
-          <button className = "button" type="submit">Create User</button>
+          <button className = "buttonL" type="submit">Create User</button>
           </FormGroup>
         </Form>
       
                 
-            </div>
+        </FormStyles>
         );
     }
 }

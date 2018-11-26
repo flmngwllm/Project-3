@@ -23,6 +23,9 @@ class Profile extends Component {
                 {this.state.user.username}
                {/* <Link to ={`/users/${userId}/lists`}> List</Link> */}
             </div>
+
+
+
         );
     }
 }

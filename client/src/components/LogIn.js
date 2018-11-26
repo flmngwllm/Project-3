@@ -18,6 +18,7 @@ class LogIn extends Component {
         
         <SignUpForm {...this.props}/>
       </div>
+      
     );
   }
 }

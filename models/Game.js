@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 const Game = new Schema({
     name: String,
-    image: String,
+    cover: String,
     description: String
    
 })
