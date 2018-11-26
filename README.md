@@ -13,6 +13,7 @@
 ## https://shrouded-tor-48008.herokuapp.com/
 
 ## Wireframe/ERD
+![alt text](Images/ERD.jpg)
 ![alt text](Images/I1.jpg)
 ![alt text](Images/I2.jpg)
 ![alt text](Images/I3.jpg)
