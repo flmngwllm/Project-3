@@ -2,9 +2,10 @@ const express = require('express')
 const router = express.Router()
 const userController = require('../controllers/userController')
 const listController = require('../controllers/listController')
-const gameController = require('../controllers/gameController')
+// const gamesController = require('../controllers/listController')
 
-
+// require controllers here
+// router.get('/', application.index)
 
 
 router.get('/api/users', userController.index)

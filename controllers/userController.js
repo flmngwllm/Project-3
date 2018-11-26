@@ -1,15 +1,16 @@
 const User = require('../models/User')
-const List = require('../models/User')
+// const List = require('../models/User')
 
 
 const userController = {
     index: (req,res) => {
-        
         User.find()
         .then((users) => {
             res.send(users)
         })
     },
+
+
     show: (req, res) => {
         User.findById(req.params.userId).populate('lists')
         .then((user) => {

@@ -1,10 +1,10 @@
-const Game = require('../models/Game')
-const List = require('../models/List')
-const User = require('../models/User')
-var request = require('request');
+// const Game = require('../models/Game')
+// const List = require('../models/List')
+// const User = require('../models/User')
+// var request = require('request');
 
 
-const gameController = {
+// const gameController = {
 
 
   // api: (req, res, next) => {
@@ -23,33 +23,33 @@ const gameController = {
   
   
 
-    index: (req, res) => {
-      let userId = req.params.userId
-      let listId = req.params.listId
-      User.findById(userId).populate('lists')
-        .then((user) => {
-          const lists = user.lists.id(listId)
-          res.send(lists.games)
-        })
-    },
+//     index: (req, res) => {
+//       let userId = req.params.userId
+//       let listId = req.params.listId
+//       User.findById(userId).populate('lists')
+//         .then((user) => {
+//           const lists = user.lists.id(listId)
+//           res.send(lists.games)
+//         })
+//     },
 
-    show: (req, res) => {
-      let gameId = req.params.gameId
-      Game.findById(gameId)
-        .then((game) => {
-          res.send(game)
-        })
-    },
-    delete: (req, res) => {
-      let gameId = req.params.gameId
-      Game.findByIdAndDelete(gameId)
-        .then(() => {
-          res.send(200)
-        })
-    }
+//     show: (req, res) => {
+//       let gameId = req.params.gameId
+//       Game.findById(gameId)
+//         .then((game) => {
+//           res.send(game)
+//         })
+//     },
+//     delete: (req, res) => {
+//       let gameId = req.params.gameId
+//       Game.findByIdAndDelete(gameId)
+//         .then(() => {
+//           res.send(200)
+//         })
+//     }
   
-  }
+//   }
   
   
 
-// module.exports = gameController
+ // module.exports = gameController
